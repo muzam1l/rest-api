@@ -4,3 +4,4 @@ staticfiles
 indian_banks.sql
 api/__pycache__
 django_api/__pycache__
+*.pyc

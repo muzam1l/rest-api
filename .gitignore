@@ -1,0 +1,7 @@
+env/
+.env
+staticfiles
+indian_banks.sql
+api/__pycache__
+api/migrations/__pycache__
+django_api/__pycache__

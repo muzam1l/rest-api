@@ -15,11 +15,11 @@ class BranchesViewSet(viewsets.ModelViewSet):
         bank_name = self.request.query_params.get('bank_name')
         qs = Branch.objects.all()
         if city is not None:
-            qs = qs.filter(city=city)
+            qs = qs.filter(city=city.upper())
         if bank_name is not None:
             bank_id = None
             try:
-                bank_id = Bank.objects.get(name=bank_name)
+                bank_id = Bank.objects.get(name=bank_name.upper())
             except Bank.DoesNotExist as err:
                 pass
             qs = qs.filter(bank=bank_id)
